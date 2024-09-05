@@ -1,0 +1,195 @@
+{
+	"info": {
+		"_postman_id": "a2af1820-e1fb-4d84-a18b-0707da3e51b9",
+		"name": "Usuario",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "12788208",
+		"_collection_link": "https://planetary-equinox-924163.postman.co/workspace/ProjetoPCAPI~b6d1d97b-7fbc-429d-b516-14a4475657c0/collection/27232556-a2af1820-e1fb-4d84-a18b-0707da3e51b9?action=share&source=collection_link&creator=12788208"
+	},
+	"item": [
+		{
+			"name": "SelecionarTodos",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "{{token}}",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{ipServidor}}/usuario",
+					"host": [
+						"{{ipServidor}}"
+					],
+					"path": [
+						"usuario"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Inserir",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "{{token}}",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"usuario\": \"teste2\",\r\n    \"nome\": \"teste2\",\r\n    \"permissao_de_escrita\": true,\r\n    \"password\": \"123\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{ipServidor}}/usuario/inserir",
+					"host": [
+						"{{ipServidor}}"
+					],
+					"path": [
+						"usuario",
+						"inserir"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "SelecaoPorId",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "{{token}}",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{ipServidor}}/usuario/2",
+					"host": [
+						"{{ipServidor}}"
+					],
+					"path": [
+						"usuario",
+						"2"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Deletar",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "{{token}}",
+							"type": "string"
+						}
+					]
+				},
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "{{ipServidor}}/usuario/2",
+					"host": [
+						"{{ipServidor}}"
+					],
+					"path": [
+						"usuario",
+						"2"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "AlterarPorId",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "{{token}}",
+							"type": "string"
+						}
+					]
+				},
+				"method": "PATCH",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"usuario\": \"teste\",\r\n    \"password\": \"123\",\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{ipServidor}}/usuario/2",
+					"host": [
+						"{{ipServidor}}"
+					],
+					"path": [
+						"usuario",
+						"2"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "PegarDonoDoToken",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "{{token}}",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{ipServidor}}/eu",
+					"host": [
+						"{{ipServidor}}"
+					],
+					"path": [
+						"eu"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}

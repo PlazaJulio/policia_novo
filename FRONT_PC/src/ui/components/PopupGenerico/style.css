@@ -1,0 +1,47 @@
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(10px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Animação de saída */
+@keyframes fadeOut {
+    from {
+        opacity: 1;
+        transform: translateY(0);
+    }
+
+    to {
+        opacity: 0;
+        transform: translateY(10px);
+    }
+}
+
+
+.notification.fade-enter-active {
+    animation: fadeIn 0.5s;
+}
+
+.notification.fade-leave-active {
+    animation: fadeOut 0.3s;
+}
+
+.notification.fade-enter,
+.notification.fade-leave-to {
+    opacity: 0;
+    transform: translateY(10px);
+}
+
+.popup-flutuante {
+    position: fixed;
+    top: 3%;
+    right: 1%;
+    width: 25%;
+    z-index: 1;
+}

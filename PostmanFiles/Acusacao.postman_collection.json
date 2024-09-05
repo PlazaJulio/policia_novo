@@ -1,0 +1,168 @@
+{
+	"info": {
+		"_postman_id": "721ce469-a944-4cbe-b78c-0eb86482a0ad",
+		"name": "Acusacao",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "12788208",
+		"_collection_link": "https://planetary-equinox-924163.postman.co/workspace/ProjetoPCAPI~b6d1d97b-7fbc-429d-b516-14a4475657c0/collection/12788208-721ce469-a944-4cbe-b78c-0eb86482a0ad?action=share&source=collection_link&creator=12788208"
+	},
+	"item": [
+		{
+			"name": "SelecaoPorId",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "{{token}}",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{ipServidor}}/acusacao/1",
+					"host": [
+						"{{ipServidor}}"
+					],
+					"path": [
+						"acusacao",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "SelecionarTodos",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOi8vbG9jYWxob3N0OjgwODAvYXV0b3JpemFjYW8vbG9naW4iLCJpYXQiOjE2OTczMDg2MzIsImV4cCI6MTY5NzMxMjIzMiwibmJmIjoxNjk3MzA4NjMyLCJqdGkiOiJScFBvN1BveFlmT0V6UVpuIiwic3ViIjoiMSIsInBydiI6IjU4NzA4NjNkNGE2MmQ3OTE0NDNmYWY5MzZmYzM2ODAzMWQxMTBjNGYifQ.09AN8lddSBZVLLxFJEtyDM9Rr0VGq6j9_iaoF0d07pI",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{ipServidor}}/acusacao",
+					"host": [
+						"{{ipServidor}}"
+					],
+					"path": [
+						"acusacao"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Inserir",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "{{token}}",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"tipificacao\": 127,\r\n    \"descricao\" : \"vender curso\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{ipServidor}}/acusacao/inserir",
+					"host": [
+						"{{ipServidor}}"
+					],
+					"path": [
+						"acusacao",
+						"inserir"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Deletar",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "{{token}}",
+							"type": "string"
+						}
+					]
+				},
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "{{ipServidor}}/acusacao/100",
+					"host": [
+						"{{ipServidor}}"
+					],
+					"path": [
+						"acusacao",
+						"100"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Alterar",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "{{token}}",
+							"type": "string"
+						}
+					]
+				},
+				"method": "PATCH",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"tipificacao\": 122,\r\n    \"descricao\": \"vender 2 cursos\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{ipServidor}}/acusacao/1",
+					"host": [
+						"{{ipServidor}}"
+					],
+					"path": [
+						"acusacao",
+						"1"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}

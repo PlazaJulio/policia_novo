@@ -1,0 +1,105 @@
+{
+	"info": {
+		"_postman_id": "7f8eaa25-e464-41b8-857c-96dff75ef9fd",
+		"name": "CriminosoAntecedente",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "12788208",
+		"_collection_link": "https://planetary-equinox-924163.postman.co/workspace/ProjetoPCAPI~b6d1d97b-7fbc-429d-b516-14a4475657c0/collection/12788208-7f8eaa25-e464-41b8-857c-96dff75ef9fd?action=share&source=collection_link&creator=12788208"
+	},
+	"item": [
+		{
+			"name": "PegarAntecedentePorCriminoso",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "{{token}}",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{ipServidor}}/criminoso-antecedente/antecedentes/1",
+					"host": [
+						"{{ipServidor}}"
+					],
+					"path": [
+						"criminoso-antecedente",
+						"antecedentes",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "PegarCriminosoPorAntecedete",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "{{token}}",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{ipServidor}}/criminoso-antecedente/criminosos/1",
+					"host": [
+						"{{ipServidor}}"
+					],
+					"path": [
+						"criminoso-antecedente",
+						"criminosos",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "VincularCriminosoAntecedente",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "{{token}}",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"antecedente_id\": 1,\r\n    \"criminoso_id\": 14\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{ipServidor}}/vincular_criminoso_antecedente",
+					"host": [
+						"{{ipServidor}}"
+					],
+					"path": [
+						"vincular_criminoso_antecedente"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}

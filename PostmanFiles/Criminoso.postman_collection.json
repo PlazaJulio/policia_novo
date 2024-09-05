@@ -1,0 +1,335 @@
+{
+	"info": {
+		"_postman_id": "34ef9b4f-5d1c-4792-bf59-f2be5607e1d6",
+		"name": "Criminoso",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "12788208",
+		"_collection_link": "https://planetary-equinox-924163.postman.co/workspace/ProjetoPCAPI~b6d1d97b-7fbc-429d-b516-14a4475657c0/collection/27166757-34ef9b4f-5d1c-4792-bf59-f2be5607e1d6?action=share&source=collection_link&creator=12788208"
+	},
+	"item": [
+		{
+			"name": "SelecaoPorId",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "{{token}}",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{ipServidor}}/criminoso/1",
+					"host": [
+						"{{ipServidor}}"
+					],
+					"path": [
+						"criminoso",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "SelecionarTodos",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOi8vbG9jYWxob3N0OjgwODAvYXV0b3JpemFjYW8vbG9naW4iLCJpYXQiOjE2OTczMDg2MzIsImV4cCI6MTY5NzMxMjIzMiwibmJmIjoxNjk3MzA4NjMyLCJqdGkiOiJScFBvN1BveFlmT0V6UVpuIiwic3ViIjoiMSIsInBydiI6IjU4NzA4NjNkNGE2MmQ3OTE0NDNmYWY5MzZmYzM2ODAzMWQxMTBjNGYifQ.09AN8lddSBZVLLxFJEtyDM9Rr0VGq6j9_iaoF0d07pI",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{ipServidor}}/criminoso?limite=20",
+					"host": [
+						"{{ipServidor}}"
+					],
+					"path": [
+						"criminoso"
+					],
+					"query": [
+						{
+							"key": "limite",
+							"value": "20"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Inserir",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "{{token}}",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "nome",
+							"value": "Julio",
+							"type": "text"
+						},
+						{
+							"key": "alcunha",
+							"value": "Juliao da faca",
+							"type": "text"
+						},
+						{
+							"key": "telefone",
+							"value": "1111111",
+							"type": "text"
+						},
+						{
+							"key": "pai",
+							"value": "Lucio",
+							"type": "text"
+						},
+						{
+							"key": "mae",
+							"value": "Lucia",
+							"type": "text"
+						},
+						{
+							"key": "data_de_nascimento",
+							"value": "2023-01-09",
+							"type": "text"
+						},
+						{
+							"key": "obito",
+							"value": "false",
+							"type": "text"
+						},
+						{
+							"key": "foragido",
+							"value": "false",
+							"type": "text"
+						},
+						{
+							"key": "rg",
+							"value": "151651618",
+							"type": "text"
+						},
+						{
+							"key": "cpf",
+							"value": "450540589",
+							"type": "text"
+						},
+						{
+							"key": "naturalidade",
+							"value": "Marilia,SP",
+							"type": "text"
+						},
+						{
+							"key": "nacionalidade",
+							"value": "Brasil",
+							"type": "text"
+						},
+						{
+							"key": "local_de_trabalho",
+							"value": "Bar do Zé",
+							"type": "text"
+						},
+						{
+							"key": "profissao",
+							"value": "Carpinteiro",
+							"type": "text"
+						},
+						{
+							"key": "estado_civil",
+							"value": "Solteiro",
+							"type": "text"
+						},
+						{
+							"key": "grau_de_escolaridade",
+							"value": "Medio Completo",
+							"type": "text"
+						},
+						{
+							"key": "genero",
+							"value": "Masculino",
+							"type": "text"
+						},
+						{
+							"key": "altura",
+							"value": "1.58",
+							"type": "text"
+						},
+						{
+							"key": "etnia",
+							"value": "asiatico",
+							"type": "text"
+						},
+						{
+							"key": "porte_fisico",
+							"value": "Forte",
+							"type": "text"
+						},
+						{
+							"key": "cor_dos_olhos",
+							"value": "Azul",
+							"type": "text"
+						},
+						{
+							"key": "cor_da_pele",
+							"value": "Amarelo",
+							"type": "text"
+						},
+						{
+							"key": "cor_do_cabelo",
+							"value": "Preto",
+							"type": "text"
+						},
+						{
+							"key": "tipo_de_cabelo",
+							"value": "Liso-Curto",
+							"type": "text"
+						},
+						{
+							"key": "foto_perfil_esquerdo",
+							"type": "file",
+							"src": "/home/renan/Pictures/Fundo.jpg"
+						},
+						{
+							"key": "foto_perfil_direito",
+							"type": "file",
+							"src": "/home/renan/Pictures/Fundo.jpg"
+						},
+						{
+							"key": "foto_frente",
+							"type": "file",
+							"src": "/home/renan/Pictures/Fundo.jpg"
+						},
+						{
+							"key": "cep",
+							"value": "11",
+							"type": "text"
+						},
+						{
+							"key": "rua",
+							"value": "a",
+							"type": "text"
+						},
+						{
+							"key": "bairro",
+							"value": "b",
+							"type": "text"
+						},
+						{
+							"key": "numero",
+							"value": "1",
+							"type": "text"
+						},
+						{
+							"key": "complemento",
+							"value": "a",
+							"type": "text"
+						},
+						{
+							"key": "excluido",
+							"value": "false",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "{{ipServidor}}/criminoso/inserir",
+					"host": [
+						"{{ipServidor}}"
+					],
+					"path": [
+						"criminoso",
+						"inserir"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Deletar",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "{{token}}",
+							"type": "string"
+						}
+					]
+				},
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "{{ipServidor}}/criminoso/14",
+					"host": [
+						"{{ipServidor}}"
+					],
+					"path": [
+						"criminoso",
+						"14"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Alterar",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "{{token}}",
+							"type": "string"
+						}
+					]
+				},
+				"method": "PATCH",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"nome\": \"Julio\",\r\n    \"alcunha\": \"Julhão da Faca\",\r\n    \"telefone\": \"(813) 960-8317\",\r\n    \"pai\": \"Lucio Harber\",\r\n    \"mae\": \"Lucinda Bradtke\",\r\n    \"data_de_nascimento\": \"2001-04-21\",\r\n    \"obito\": false,\r\n    \"foragido\": false,\r\n    \"rg\": \"01706123456\",\r\n    \"cpf\": \"98152123456\",\r\n    \"naturalidade\": \"Marilia,SP\",\r\n    \"nacionalidade\": \"Brasil\",\r\n    \"local_de_trabalho\": \"Buteco do Ze\",\r\n    \"profissao\": \"Carpinteiro\",\r\n    \"estado_civil\": \"Solteiro\",\r\n    \"grau_de_escolaridade\": \"Medio Completo\",\r\n    \"genero\": \"Masculino\",\r\n    \"altura\": 1.56,\r\n    \"etnia\": \"Asiatico\",\r\n    \"porte_fisico\": \"Forte\",\r\n    \"cor_dos_olhos\": \"Castanho\",\r\n    \"cor_da_pele\": \"Amarelo\",\r\n    \"cor_do_cabelo\": \"Preto\",\r\n    \"tipo_de_cabelo\": \"Liso-Curto\",\r\n    \"foto_perfil_esquerdo\": \"/Caminho\",\r\n    \"foto_perfil_direito\": \"/Caminho2\",\r\n    \"foto_frente\": \"/Caminho3\",\r\n    \"excluido\": false,\r\n    \"endereco_id\": 4\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{ipServidor}}/criminoso/11",
+					"host": [
+						"{{ipServidor}}"
+					],
+					"path": [
+						"criminoso",
+						"11"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}

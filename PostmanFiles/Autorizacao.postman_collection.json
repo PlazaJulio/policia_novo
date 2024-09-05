@@ -1,0 +1,103 @@
+{
+	"info": {
+		"_postman_id": "97200c5e-6d81-4142-8a07-9c8f03dcb946",
+		"name": "Autorizacao",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "12788208",
+		"_collection_link": "https://planetary-equinox-924163.postman.co/workspace/ProjetoPCAPI~b6d1d97b-7fbc-429d-b516-14a4475657c0/collection/12788208-97200c5e-6d81-4142-8a07-9c8f03dcb946?action=share&source=collection_link&creator=12788208"
+	},
+	"item": [
+		{
+			"name": "Login",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"usuario\": \"admin\",\r\n    \"password\": \"123\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{ipServidor}}/autorizacao/login",
+					"host": [
+						"{{ipServidor}}"
+					],
+					"path": [
+						"autorizacao",
+						"login"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Logout",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "{{token}}",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{ipServidor}}/autorizacao/logout",
+					"host": [
+						"{{ipServidor}}"
+					],
+					"path": [
+						"autorizacao",
+						"logout"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Refresh",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "{{token}}",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"url": {
+					"raw": "{{ipServidor}}/autorizacao/refresh",
+					"host": [
+						"{{ipServidor}}"
+					],
+					"path": [
+						"autorizacao",
+						"refresh"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}

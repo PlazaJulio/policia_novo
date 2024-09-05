@@ -1,0 +1,48 @@
+{
+	"info": {
+		"_postman_id": "2cbd34ae-385b-4757-9260-f8bffc8cb5ee",
+		"name": "Filtro",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "12788208",
+		"_collection_link": "https://planetary-equinox-924163.postman.co/workspace/ProjetoPCAPI~b6d1d97b-7fbc-429d-b516-14a4475657c0/collection/12788208-2cbd34ae-385b-4757-9260-f8bffc8cb5ee?action=share&source=collection_link&creator=12788208"
+	},
+	"item": [
+		{
+			"name": "FiltroCriminosos",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "{{token}}",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"nome\": null,\n    \"idade_minima\": 0,\n    \"idade_maxima\": 0\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{ipServidor}}/criminoso/filtro",
+					"host": [
+						"{{ipServidor}}"
+					],
+					"path": [
+						"criminoso",
+						"filtro"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}

@@ -1,0 +1,168 @@
+{
+	"info": {
+		"_postman_id": "fa03d6e7-4505-4f26-863d-03d3a86cc465",
+		"name": "Antecedente",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "12788208",
+		"_collection_link": "https://planetary-equinox-924163.postman.co/workspace/ProjetoPCAPI~b6d1d97b-7fbc-429d-b516-14a4475657c0/collection/27166757-fa03d6e7-4505-4f26-863d-03d3a86cc465?action=share&source=collection_link&creator=12788208"
+	},
+	"item": [
+		{
+			"name": "SelecaoPorId",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "{{token}}",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{ipServidor}}/antecedente/13",
+					"host": [
+						"{{ipServidor}}"
+					],
+					"path": [
+						"antecedente",
+						"13"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "SelecionarTodos",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOi8vbG9jYWxob3N0OjgwODAvYXV0b3JpemFjYW8vbG9naW4iLCJpYXQiOjE2OTczMDg2MzIsImV4cCI6MTY5NzMxMjIzMiwibmJmIjoxNjk3MzA4NjMyLCJqdGkiOiJScFBvN1BveFlmT0V6UVpuIiwic3ViIjoiMSIsInBydiI6IjU4NzA4NjNkNGE2MmQ3OTE0NDNmYWY5MzZmYzM2ODAzMWQxMTBjNGYifQ.09AN8lddSBZVLLxFJEtyDM9Rr0VGq6j9_iaoF0d07pI",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{ipServidor}}/antecedente",
+					"host": [
+						"{{ipServidor}}"
+					],
+					"path": [
+						"antecedente"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Inserir",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "{{token}}",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"local\" : \"Rua dos troxas, 0\",\r\n    \"data\" : \"2020-05-13\",\r\n    \"hora\" : \"20:30:00\",\r\n    \"descricao\" : \"Meliante Tentou fugir sem sucesso\",\r\n    \"acusacao_id\" : 1,\r\n    \"criminoso_id\" : 9\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{ipServidor}}/antecedente/inserir",
+					"host": [
+						"{{ipServidor}}"
+					],
+					"path": [
+						"antecedente",
+						"inserir"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Deletar",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "{{token}}",
+							"type": "string"
+						}
+					]
+				},
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "{{ipServidor}}/antecedente/1",
+					"host": [
+						"{{ipServidor}}"
+					],
+					"path": [
+						"antecedente",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Alterar",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "{{token}}",
+							"type": "string"
+						}
+					]
+				},
+				"method": "PATCH",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"local\" : \"Rua dos troxas, 2\",\r\n    \"data\" : \"2020-05-13\",\r\n    \"hora\" : \"20:30:00\",\r\n    \"descricao\" : \"Meliante Tentou fugir sem sucesso\",\r\n    \"acusacao_id\" : 1,\r\n    \"criminoso_id\" : 10\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{ipServidor}}/antecedente/14",
+					"host": [
+						"{{ipServidor}}"
+					],
+					"path": [
+						"antecedente",
+						"14"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
